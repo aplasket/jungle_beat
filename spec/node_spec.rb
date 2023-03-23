@@ -7,7 +7,7 @@ describe Node do
     expect(node).to be_a(Node)
   end
 
-  it "has readable attributes" do
+  it "has_readable_attributes" do
     node = Node.new("plop")
 require 'pry'; binding.pry
     expect(node.data).to eq("plop")
