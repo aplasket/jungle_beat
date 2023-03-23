@@ -9,7 +9,9 @@ describe Node do
 
   it "has readable attributes" do
     node = Node.new("plop")
-    
+require 'pry'; binding.pry
+    expect(node.data).to eq("plop")
+    expect(node.next_node).to be_nil
   end
 
 end
