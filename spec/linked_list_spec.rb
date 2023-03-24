@@ -17,7 +17,7 @@ describe LinkedList do
   it "can_append_nodes" do
     list = LinkedList.new
     list.append("doop")
-  
+
     expect(list.head.next_node).to be_nil
     expect(list.head.data).to eq("doop")
     expect(list.count).to eq(1)
@@ -39,5 +39,23 @@ describe LinkedList do
     expect(list.to_string).to eq("doop deep")
   end
 
-  
+  it "adds_node_to_beginning_of_list" do
+    list = LinkedList.new
+    list.append("plop")
+    list.append("suu")
+    list.prepend("dop")
+
+    expect(list.to_string).to eq("dop plop suu")
+    expect(list.count).to eq(3)
+  end
+
+  xit "inserts_nodes_at_specified_position" do
+    list = LinkedList.new
+    list.append("plop")
+    list.append("suu")
+    list.prepend("dop")
+    list.insert(1, "woo")
+
+    expect(list.to_string).to eq("dop woo plop suu")
+  end
 end

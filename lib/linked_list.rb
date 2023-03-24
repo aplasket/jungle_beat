@@ -1,19 +1,27 @@
 class LinkedList
-  attr_reader :head, :num_nodes, :current_node
+  attr_reader :head, :current_node
 
   def initialize
     @head = nil
-    @num_nodes = 0
   end
 
   def count
-    @num_nodes
+    if @head == nil
+      count = 0
+    else
+      current_node = @head.next_node
+      count = 1
+      until current_node.nil?
+        count += 1
+        current_node = current_node.next_node
+      end
+    end
+    count
   end
 
   def append(data)
     if @head == nil
       @head = Node.new(data)
-      @num_nodes += 1
       @head.data
     else
       make_current_node(data)
@@ -39,6 +47,20 @@ class LinkedList
     end
     string
   end
+
+  def prepend(data)
+    if @head == nil
+      @head = Node.new(data)
+      @head.data
+    else
+      current_node = Node.new(data)
+      current_node.next_node = @head
+      @head = current_node
+    end
+    @head.data
+  end
+
+
 end
 
 
