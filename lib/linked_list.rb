@@ -60,6 +60,9 @@ class LinkedList
     @head.data
   end
 
+  def insert(index, data)
+    
+  end
 
 end
 
