@@ -81,8 +81,6 @@ class LinkedList
   end
 
   def find(index, num_elements)
-    #at index(y), return (x)elements
-
     current_node = @head
     index_counter = 0
     elem_counter = 0
@@ -98,24 +96,6 @@ class LinkedList
       current_node = current_node.next_node
     end
     string.lstrip
-  
-
-    #current_node starts at @head, and go to next_node
-    # make current_node = current_node.next_node 
-    # until next_node = index
-    # once next_node = index
-    # return that node data
-    # increase index_counter += 1
-    # once index_counter = index, end
-
-    # until the counter != num_elements
-      # return the node data
-      # counter += 1
-    # end
-
-
-
-
   end
 end
 
@@ -174,3 +154,18 @@ end
     # until current_node.next_node.nil?
     #   #assign i (index) to current_node
     #   #add 1 for next_node
+
+
+
+    #current_node starts at @head, and go to next_node
+    # make current_node = current_node.next_node 
+    # until next_node = index
+    # once next_node = index
+    # return that node data
+    # increase index_counter += 1
+    # once index_counter = index, end
+
+    # until the counter != num_elements
+      # return the node data
+      # counter += 1
+    # end
