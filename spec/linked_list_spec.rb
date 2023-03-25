@@ -83,4 +83,17 @@ describe LinkedList do
     expect(list.includes?("deep")).to be true
     expect(list.includes?("dep")).to be false
   end
+
+  it "removes_and_returns_last_element" do
+    list = LinkedList.new
+    list.append("deep")
+    list.append("woo")
+    list.append("shi")
+    list.append("shu")
+    list.append("blop")
+
+    expect(list.pop).to eq("blop")
+    expect(list.pop).to eq("shu")
+    expect(list.to_string).to eq("deep woo shi")
+  end
 end
