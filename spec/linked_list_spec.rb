@@ -49,13 +49,13 @@ describe LinkedList do
     expect(list.count).to eq(3)
   end
 
-  xit "inserts_nodes_at_specified_position" do
+  it "inserts_nodes_at_specified_position" do
     list = LinkedList.new
     list.append("plop")
     list.append("suu")
+    require 'pry'; binding.pry
     list.prepend("dop")
     list.insert(1, "woo")
-
     expect(list.to_string).to eq("dop woo plop suu")
   end
 end

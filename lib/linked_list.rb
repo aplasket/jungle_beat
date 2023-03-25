@@ -61,9 +61,24 @@ class LinkedList
   end
 
   def insert(index, data)
-    
+   current_node = @head
+   counter = 1
+   if index == 0 
+    placeholder = @head
+    @head = Node.new(data)
+    @head.next_node = placeholder
+   else
+    while index != counter
+      current_node = current_node.next_node
+      counter += 1
+    end
+    placeholder = current_node.next_node
+    insert_node = Node.new(data)
+    current_node.next_node = insert_node
+    insert_node.next_node = placeholder
+    insert_node.data
+   end
   end
-
 end
 
 
@@ -99,3 +114,25 @@ end
 #     @head.next_node.data
 #  end
 #end
+
+
+#initial thoughts on insert method:
+ # # if @head == nil
+    # #   @head = Node.new(data)
+    # #   @head.data
+    # # else
+    # #   current_node = Node.new(data)
+
+
+    # current_node = @head.index(0)
+    # until current_node.next_node.nil?
+    #   current_node.next_node.index(1)
+    #   index += 1
+    # end
+
+    # # or could i do
+    # i = 0
+    # current_node = @head(i)
+    # until current_node.next_node.nil?
+    #   #assign i (index) to current_node
+    #   #add 1 for next_node
