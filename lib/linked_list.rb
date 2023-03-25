@@ -97,6 +97,10 @@ class LinkedList
     end
     string.lstrip
   end
+
+  def includes?(data)
+   self.to_string.include?(data)
+  end
 end
 
 
@@ -169,3 +173,16 @@ end
       # return the node data
       # counter += 1
     # end
+
+
+    #thoughts on include method:
+     # iterate through the linked list 
+    # checking if any node data includes/matches
+     #the arguement passed in
+      
+    #  # or :
+    #  current_node = @head
+
+    #  until current_node.next_node.nil?
+
+    #  end
