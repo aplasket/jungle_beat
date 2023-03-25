@@ -64,20 +64,58 @@ class LinkedList
    current_node = @head
    counter = 1
    if index == 0 
-    placeholder = @head
-    @head = Node.new(data)
-    @head.next_node = placeholder
-   else
-    while index != counter
-      current_node = current_node.next_node
-      counter += 1
-    end
-    placeholder = current_node.next_node
-    insert_node = Node.new(data)
-    current_node.next_node = insert_node
-    insert_node.next_node = placeholder
-    insert_node.data
+      placeholder = @head
+      @head = Node.new(data)
+      @head.next_node = placeholder
+    else
+      while index != counter
+        current_node = current_node.next_node
+        counter += 1
+      end
+      placeholder = current_node.next_node
+      insert_node = Node.new(data)
+      current_node.next_node = insert_node
+      insert_node.next_node = placeholder
+      insert_node.data
    end
+  end
+
+  def find(index, num_elements)
+    #at index(y), return (x)elements
+
+    current_node = @head
+    index_counter = 0
+    elem_counter = 0
+    string = ""
+    
+    until elem_counter == num_elements
+      while index_counter != index
+        current_node = current_node.next_node
+        index_counter += 1
+      end
+      string << " " + current_node.data
+      elem_counter += 1
+      current_node = current_node.next_node
+    end
+    string.lstrip
+  
+
+    #current_node starts at @head, and go to next_node
+    # make current_node = current_node.next_node 
+    # until next_node = index
+    # once next_node = index
+    # return that node data
+    # increase index_counter += 1
+    # once index_counter = index, end
+
+    # until the counter != num_elements
+      # return the node data
+      # counter += 1
+    # end
+
+
+
+
   end
 end
 
