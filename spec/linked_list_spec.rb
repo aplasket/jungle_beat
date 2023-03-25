@@ -53,7 +53,7 @@ describe LinkedList do
     list = LinkedList.new
     list.append("plop")
     list.append("suu")
-    require 'pry'; binding.pry
+  
     list.prepend("dop")
     list.insert(1, "woo")
     expect(list.to_string).to eq("dop woo plop suu")
