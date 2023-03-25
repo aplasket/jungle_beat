@@ -58,4 +58,16 @@ describe LinkedList do
     list.insert(1, "woo")
     expect(list.to_string).to eq("dop woo plop suu")
   end
+
+  it "finds_and_returns_elements " do
+    list = LinkedList.new
+    list.append("deep")
+    list.append("woo")
+    list.append("shi")
+    list.append("shu")
+    list.append("blop")
+
+    expect(list.to_string).to eq("deep woo shi shu blop")
+    expect(list.find(2,1)).to eq("shi")
+  end
 end
