@@ -99,7 +99,17 @@ class LinkedList
   end
 
   def includes?(data)
-   self.to_string.include?(data)
+    self.to_string.include?(data)
+  end
+
+  def pop
+    current_node = @head
+    until current_node.next_node.next_node.nil?
+      current_node = current_node.next_node
+    end
+    final_node = current_node.next_node
+    current_node.next_node = nil
+    final_node.data
   end
 end
 
@@ -186,3 +196,9 @@ end
     #  until current_node.next_node.nil?
 
     #  end
+
+    #thoughts on pop method
+    # this method works, but isn't permenantly removing 
+    # the last beat from the list
+      # beats = self.to_string.split(" ")
+      # beats.delete(beats.last)
