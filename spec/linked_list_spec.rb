@@ -26,8 +26,8 @@ describe LinkedList do
   it "can_append_multiple_nodes" do
     list = LinkedList.new
     list.append("doop")
-   
     list.append("deep")
+
     expect(list.head.next_node.data).to eq("deep")
   end
 
@@ -39,7 +39,7 @@ describe LinkedList do
     expect(list.to_string).to eq("doop deep")
   end
 
-  it "adds_node_to_beginning_of_list" do
+  it "prepends_node_to_beginning_of_list" do
     list = LinkedList.new
     list.append("plop")
     list.append("suu")
@@ -53,10 +53,13 @@ describe LinkedList do
     list = LinkedList.new
     list.append("plop")
     list.append("suu")
-  
     list.prepend("dop")
     list.insert(1, "woo")
     expect(list.to_string).to eq("dop woo plop suu")
+    
+    list.insert(0, "heeha")
+    expect(list.to_string).to eq("heeha dop woo plop suu")
+
   end
 
   it "finds_and_returns_elements " do

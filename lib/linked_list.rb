@@ -64,19 +64,17 @@ class LinkedList
    current_node = @head
    counter = 1
    if index == 0 
-      placeholder = @head
-      @head = Node.new(data)
-      @head.next_node = placeholder
-    else
-      while index != counter
-        current_node = current_node.next_node
-        counter += 1
-      end
-      placeholder = current_node.next_node
-      insert_node = Node.new(data)
-      current_node.next_node = insert_node
-      insert_node.next_node = placeholder
-      insert_node.data
+    prepend(data)
+   else
+    while index != counter
+      current_node = current_node.next_node
+      counter += 1
+    end
+    placeholder = current_node.next_node
+    insert_node = Node.new(data)
+    current_node.next_node = insert_node
+    insert_node.next_node = placeholder
+    insert_node.data
    end
   end
 
@@ -202,3 +200,24 @@ end
     # the last beat from the list
       # beats = self.to_string.split(" ")
       # beats.delete(beats.last)
+
+      #original code before refactoring:
+      # def insert(index, data)
+      #   current_node = @head
+      #   counter = 1
+      #   if index == 0 
+      #      # placeholder = @head
+      #      # @head = Node.new(data)
+      #      # @head.next_node = placeholder
+      #    else
+      #      while index != counter
+      #        current_node = current_node.next_node
+      #        counter += 1
+      #      end
+      #      placeholder = current_node.next_node
+      #      insert_node = Node.new(data)
+      #      current_node.next_node = insert_node
+      #      insert_node.next_node = placeholder
+      #      insert_node.data
+      #   end
+      #  end
