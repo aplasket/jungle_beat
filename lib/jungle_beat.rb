@@ -5,6 +5,9 @@ class JungleBeat
   end
 
   def append(data)
-    
+    data.split(" ").each do |y|
+      list.append(y)
+    end
+    data
   end
 end
