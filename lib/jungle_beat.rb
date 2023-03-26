@@ -10,4 +10,8 @@ class JungleBeat
     end
     data
   end
+
+  def count
+    list.count
+  end
 end
