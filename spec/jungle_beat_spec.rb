@@ -43,4 +43,12 @@ RSpec.describe JungleBeat do
     jb.append("beep whooo heeha doop")
     expect(jb.play).to eq("")
   end
+
+  it "changes_rate" do
+    jb = JungleBeat.new
+    jb.append("deep dop dop deep")
+    jb.rate(100)
+
+    expect(jb.play).to eq("")
+  end
 end
