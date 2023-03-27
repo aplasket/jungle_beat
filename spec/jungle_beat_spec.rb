@@ -35,12 +35,12 @@ RSpec.describe JungleBeat do
   it "plays_the_data_outloud" do
     jb = JungleBeat.new
     jb.append("deep doo ditt woo hoo shu")
-    jb.play
 
     expect(jb.count).to eq(6)
     expect(jb.list.count).to eq(6)
+    expect(jb.play).to eq("")
 
     jb.append("beep whooo heeha doop")
-    jb.play
+    expect(jb.play).to eq("")
   end
 end
