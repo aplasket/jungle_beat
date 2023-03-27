@@ -6,17 +6,17 @@ class JungleBeat
 
   def append(data)
     data.split(" ").each do |y|
-      list.append(y)
+      @list.append(y)
     end
     data
   end
 
   def count
-    list.count
+    @list.count
   end
 
   def play
-    beats = list.to_string
+    beats = @list.to_string
     `say -r 200 -v Boing #{beats}`
   end
 end
