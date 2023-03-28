@@ -73,4 +73,12 @@ RSpec.describe JungleBeat do
     expect(jb.reset_rate).to eq(500)
     expect(jb.play).to eq("")
   end
+
+  it "only_plays_accepted_data" do
+    jb = JungleBeat.new
+    jb.append("deep")
+    jb.append("Mississippi")
+    
+    expect(jb.all).to eq("deep")
+  end
 end
