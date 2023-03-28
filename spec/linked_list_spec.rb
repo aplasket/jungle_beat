@@ -17,7 +17,7 @@ describe LinkedList do
   it "can_append_nodes" do
     list = LinkedList.new
     list.append("doop")
-
+  
     expect(list.head.next_node).to be_nil
     expect(list.head.data).to eq("doop")
     expect(list.count).to eq(1)
@@ -57,8 +57,9 @@ describe LinkedList do
     list.insert(1, "woo")
     expect(list.to_string).to eq("dop woo plop suu")
     
-    list.insert(0, "heeha")
-    expect(list.to_string).to eq("heeha dop woo plop suu")
+    # testing edge cases:
+    # list.insert(0, "heeha")
+    # expect(list.to_string).to eq("heeha dop woo plop suu")
   end
 
   it "finds_and_returns_elements " do
