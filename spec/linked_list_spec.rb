@@ -55,6 +55,7 @@ describe LinkedList do
     list.append("suu")
     list.prepend("dop")
     list.insert(1, "woo")
+    
     expect(list.to_string).to eq("dop woo plop suu")
     
     # testing edge cases:
