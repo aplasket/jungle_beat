@@ -1,5 +1,5 @@
 class JungleBeat
-  attr_reader :list, :rate
+  attr_reader :list, :rate, :voice
   def initialize(rate = 500, voice = "Boing")
     @list = LinkedList.new
     @rate = rate
