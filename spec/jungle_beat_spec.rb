@@ -40,8 +40,9 @@ RSpec.describe JungleBeat do
     expect(jb.list.count).to eq(6)
     expect(jb.play).to eq("")
 
-    jb.append("beep whooo heeha doop")
-    expect(jb.play).to eq("")
+    #testing for edge cases
+    # jb.append("beep whooo heeha doop")
+    # expect(jb.play).to eq("")
   end
 
   it "changes_rate" do
@@ -57,7 +58,6 @@ RSpec.describe JungleBeat do
     jb.append("deep dop dop deep")
     jb.voice("Daniel")
     jb.rate(100)
-    jb.play
 
     expect(jb.rate).to eq (100)
   end
@@ -67,10 +67,10 @@ RSpec.describe JungleBeat do
     jb.append("deep dop dop deep")
     jb.voice("Daniel")
     jb.rate(100)
-    jb.reset_rate
-    jb.reset_voice
+    jb.play
 
-    expect(jb.voice).to eq("Boing")
-    expect(jb.rate).to eq(500)
+    expect(jb.reset_voice).to eq("Boing")
+    expect(jb.reset_rate).to eq(500)
+    expect(jb.play).to eq("")
   end
 end

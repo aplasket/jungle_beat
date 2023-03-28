@@ -28,6 +28,7 @@ class JungleBeat
 
   def voice(name)
     @voice = name
+    @voice
   end
 
   def reset_rate
