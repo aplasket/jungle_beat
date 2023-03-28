@@ -7,10 +7,31 @@ class JungleBeat
   end
 
   def append(data)
+    accepted_data = "tee dee deep bop boop la na dop
+    woo hoo shu ditt doo"
+
     data.split(" ").each do |y|
-      @list.append(y)
+      if accepted_data.include?(y)
+        @list.append(y)
+      end
     end
     data
+  end
+
+  def prepend(data)
+    accepted_data = "tee dee deep bop boop la na dop
+    woo hoo shu ditt doo"
+
+    data.split(" ").each do |y|
+      if accepted_data.include?(y)
+        @list.prepend(y)
+      end
+    end
+    data
+  end
+
+  def all 
+    @list.to_string
   end
 
   def count
