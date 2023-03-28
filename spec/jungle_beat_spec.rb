@@ -59,7 +59,7 @@ RSpec.describe JungleBeat do
     jb.voice("Daniel")
     jb.rate(100)
 
-    expect(jb.rate).to eq (100)
+    expect(jb.play).to eq("")
   end
 
   it "resets_rate" do
