@@ -59,7 +59,6 @@ describe LinkedList do
     
     list.insert(0, "heeha")
     expect(list.to_string).to eq("heeha dop woo plop suu")
-
   end
 
   it "finds_and_returns_elements " do
