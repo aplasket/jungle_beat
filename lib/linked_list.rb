@@ -4,21 +4,7 @@ class LinkedList
   def initialize
     @head = nil
   end
-
-  def count
-    if @head == nil
-      count = 0
-    else
-      current_node = @head.next_node
-      count = 1
-      until current_node.nil?
-        count += 1
-        current_node = current_node.next_node
-      end
-    end
-    count
-  end
-
+  
   def append(data)
     if @head == nil
       @head = Node.new(data)
@@ -35,6 +21,20 @@ class LinkedList
     end
     current_node.next_node = Node.new(data)
     current_node.next_node.data
+  end
+  
+  def count
+    if @head == nil
+      count = 0
+    else
+      current_node = @head.next_node
+      count = 1
+      until current_node.nil?
+        count += 1
+        current_node = current_node.next_node
+      end
+    end
+    count
   end
 
   def to_string
