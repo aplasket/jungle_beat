@@ -13,5 +13,4 @@ describe Node do
     expect(node.data).to eq("plop")
     expect(node.next_node).to be_nil
   end
-
 end
