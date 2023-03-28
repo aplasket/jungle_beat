@@ -39,10 +39,6 @@ RSpec.describe JungleBeat do
     expect(jb.count).to eq(6)
     expect(jb.list.count).to eq(6)
     expect(jb.play).to eq("")
-
-    #testing for edge cases
-    # jb.append("beep whooo heeha doop")
-    # expect(jb.play).to eq("")
   end
   
   it "only_plays_accepted_data" do
