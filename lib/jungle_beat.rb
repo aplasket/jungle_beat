@@ -25,4 +25,18 @@ class JungleBeat
   def rate(number)
     @rate = number
   end
+
+  def voice(name)
+    @voice = name
+  end
+
+  def reset_rate
+    @rate = 500
+    @rate
+  end
+
+  def reset_voice
+    @voice = "Boing"
+    @voice
+  end
 end
